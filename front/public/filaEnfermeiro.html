@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fila de atendimento - Clínica Easy Way</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Clínica Easy Way</h1>
+    <nav>
+
+    </nav>
+  </header>
+  <main>
+    <section id="filaEnfermeiro">
+      <h2>Fila de atendimento - Enfermagem</h2>
+      <table id="tabela-fila">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Data da Consulta</th>
+            <th>Especialidade</th>
+            <th>Comentários</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela-fila">
+          <!-- Aqui serão exibidos os pacientes na fila de atendimento -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 Clínica Easy Way. Todos os direitos reservados.</p>
+  </footer>
+  <script src="menu_generate_enfermeiro.js"></script>
+  <script src="filaEnfermeiro.js"></script>
+  <script>
+    // Função para chamar o método de buscar pacientes na fila
+    function buscarPacientesNaFila() {
+      // Adicione aqui o código para buscar pacientes na fila e preencher a tabela
+    }
+
+    // Função para chamar o método de salvar comentários
+    async function salvarComentario(agendamentoId, pacienteId) {
+      try {
+        const comentarios = document.getElementById(`comentarios-${agendamentoId}`).value;
+
+        // Enviar os comentários para o servidor
+        const response = await fetch(`/salvar-comentarios-prontuario/${pacienteId}/${agendamentoId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+          },
+          body: JSON.stringify({ comentarios }),
+        });
+
+        const data = await response.json();
+
+        if (data.erro) {
+          console.error('Erro ao salvar comentários:', data.mensagem);
+        } else {
+          alert('Comentários salvos com sucesso.');
+
+          // Atualizar a tabela após salvar os comentários
+          buscarPacientesNaFila();
+        }
+      } catch (error) {
+        console.error('Erro ao salvar comentários:', error);
+        alert('Erro ao salvar comentários. Verifique a conexão e tente novamente.');
+      }
+    }
+
+    // Executar a busca de pacientes na fila ao carregar a página
+    document.addEventListener("DOMContentLoaded", buscarPacientesNaFila);
+  </script>
+</body>
+
+</html>

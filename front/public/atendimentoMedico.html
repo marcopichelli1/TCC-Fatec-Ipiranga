@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendimento Médico - Clínica Easy Way</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Clínica Easy Way</h1>
+    <nav>
+      <!-- Adicione elementos de navegação, se necessário -->
+    </nav>
+  </header>
+  <main>
+    <div id="historicoAtendimentos">
+      <!-- Exibir histórico de atendimentos -->
+      <h3>Histórico de Atendimentos</h3>
+      <table id="tabelaAtendimentos">
+        <thead>
+          <tr>
+            <th>Data da Consulta</th>
+            <th>Especialidade</th>
+            <th>Status</th>
+            <th>Comentários do Enfermeiro</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabelaAtendimentos"></tbody>
+      </table>
+    </div>
+
+    <div id="consultasPassadas">
+      <!-- Aqui serão exibidas as consultas passadas do paciente -->
+      <h3>Consultas Passadas</h3>
+      <table id="tabelaConsultasPassadas">
+        <thead>
+          <tr>
+            <th>Data da Consulta</th>
+            <th>Especialidade</th>
+            <th>Status</th>
+            <th>Comentários do Enfermeiro</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabelaConsultasPassadas"></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 Clínica Easy Way. Todos os direitos reservados.</p>
+  </footer>
+  <script src="menu_generate_medico.js"></script>
+  <script src="atendimentoMedico.js"></script>
+</body>
+</html>

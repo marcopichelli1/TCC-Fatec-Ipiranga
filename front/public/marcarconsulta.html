@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcar Consulta - Clínica Easy Way</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="marcarconsulta.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Clínica Easy Way</h1>
+    <nav>
+      <p id="perfilNome"><b><span id="nomePaciente"></span></b></p>
+
+    </nav>
+  </header>
+
+  <main>
+    <h2>Marcar nova consulta</h2>
+    <form id="consulta-form">
+      <label for="especialidade">Escolha a especialidade desejada:</label>
+      <select id="especialidade" name="especialidade">
+        <option value="especialidade">Escolha uma especialidade</option>
+        <option value="Cardiologia">Cardiologia</option>
+        <option value="Dermatologia">Dermatologia</option>
+        <option value="Ortopedia">Ortopedia</option>
+        <option value="Ginecologia">Ginecologia</option>
+        <option value="Neurologia">Neurologia</option>
+        
+        <!-- Adicione outras especialidades aqui -->
+
+      </select>
+
+      <label for="data">Escolha a data da consulta:</label>
+      <input type="date" id="data" name="data">
+
+      <label for="hora">Escolha a hora da consulta:</label>
+      <input type="time" id="hora" name="hora"> 
+      <span id="erro-data-hora" style="color: red;"></span> <!-- Exibir mensagem de erro de data/hora --><br></br>
+
+      <button type="submit">Marcar consulta</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+        <p>&copy; 2023 Clínica Easy Way. Todos os direitos reservados.</p>
+  </footer>
+    <!-- Inclua os scripts JavaScript necessários no final do arquivo -->
+    <script src="menu_generate.js"></script>
+    
+  </body>
+  
+  </html>
+    

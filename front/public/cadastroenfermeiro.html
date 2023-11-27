@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="sistema.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Enfermeiro - Clínica Easy Way</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="cadastroEnfermeiro.js"></script>
+</head>
+
+<body>
+    <header>
+      <h1><a href="index.html">Clínica Easy Way</a></h1>
+        <nav>
+
+        </nav>
+      </header>
+    
+<div >
+
+  <main>
+    <section class="background_to_forms_cadastro" id="cadastro">
+
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#2e856e"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path d="M441 7l32 32 32 32c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-15-15L417.9 128l55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-72-72L295 73c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l55 55L422.1 56 407 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0zM210.3 155.7l61.1-61.1c.3 .3 .6 .7 1 1l16 16 56 56 56 56 16 16c.3 .3 .6 .6 1 1l-191 191c-10.5 10.5-24.7 16.4-39.6 16.4H97.9L41 505c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l57-57V325.3c0-14.9 5.9-29.1 16.4-39.6l43.3-43.3 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57 41.4-41.4 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57z"/>
+        </svg>
+        Cadastro Enfermeiro</h2>
+      <form id="formularioCadastro" action="/cadastrar-enfermeiro" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmar-senha">Confirmar senha:</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+        <label for="coren">Coren:</label>
+        <input type="text" id="coren" name="coren" required>
+
+       <!-- Campo de concordância com os termos de uso -->
+      <div class="checkbox-container">
+        <input type="checkbox" id="concordoCheckbox" name="concordoCheckbox" required>
+        <label for="concordoCheckbox">Concordo com os <a href="termos-de-uso-enfermeiro.html">termos de uso</a></label>
+        </div>
+  
+          <button type="submit">Cadastrar</button>
+
+          <a href="loginEnfermeiro.html"><p><b>Já tem uma conta? Faça o seu login aqui</b></p></a><br></br>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Clínica Easy Way. Todos os direitos reservados.</p>
+  </footer>
+  <script src=""></script>
+</body>
+
+</html>

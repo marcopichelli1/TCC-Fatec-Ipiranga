@@ -1,0 +1,434 @@
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F2F5F9;
+}
+
+h1, h2, h3 {
+  color: #2D3E50;
+}
+
+p {
+  color: #000000;
+}
+
+a {
+  color: #2D3E50;
+  text-decoration: none;
+}
+
+header {
+  background-color: #006C6E;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #2e856e;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #FFFFFF;
+}
+
+section {
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"],
+button.btn-atualizar { /* Estilo para o botão "Atualizar" no perfil do paciente */
+  background-color: #2e856e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* Aumente o raio para torná-lo mais arredondado */
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinhe o ícone verticalmente */
+  font-weight: bold;
+  text-decoration: none; /* Remova a decoração de texto */
+}
+
+button[type="submit"]:hover,
+button.btn-atualizar:hover { /* Estilo para o botão "Atualizar" no perfil do paciente quando passa o mouse */
+  background-color: #266e5c; /* Cor mais escura ao passar o mouse */
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: #FFFFFF;
+}
+
+/* Estilos específicos */
+
+#home {
+  background-image: url('images/home-background.jpg');
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 100px;
+}
+
+#cadastro,
+#login,
+#busca {
+  background-color: #E6F5F6;
+  border-radius: 5px;
+}
+
+#cadastro form label,
+#login form label,
+#busca form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#cadastro button,
+#login button,
+#busca button {
+  width: auto;
+  margin-top: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Seletor de elemento ao qual você deseja aplicar o background */
+.background_to_forms {
+  background-image: url('public\img\bg.png');
+  /* Outras propriedades de background, como repetição, tamanho e posição */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background_to_forms_cadastro {
+  background-image: url('public\img\bg.png');
+  /* Outras propriedades de background, como repetição, tamanho e posição */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: chocolate;
+  /* width: 300px;
+  height: 200px; Outras propriedades de estilo para a sua div, se necessário */
+}
+
+/* Estilos específicos para os botões de login */
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Botão do Google */
+.btn-google,
+button.btn-atualizar { /* Estilo para o botão "Atualizar" no perfil do paciente */
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px; /* Aumente o raio para torná-lo mais arredondado */
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinhe o ícone verticalmente */
+  font-weight: bold;
+  border: none; /* Remova a borda externa */
+}
+.btn-go-to-cadastro{
+
+  background-color: #2e856e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* Aumente o raio para torná-lo mais arredondado */
+  cursor: pointer;
+
+}
+
+.btn-google:hover,
+button.btn-atualizar:hover { /* Estilo para o botão "Atualizar" no perfil do paciente quando passa o mouse */
+  background: #f2f2f2; /* Cor de fundo ao passar o mouse */
+}
+
+/* Botão do Facebook */
+.btn-facebook {
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px; /* Aumente o raio para torná-lo mais arredondado */
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinhe o ícone verticalmente */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Transição suave de cor de fundo */
+  border: none; /* Remova a borda externa */
+}
+
+.btn-facebook:hover {
+  background: #f2f2f2; /* Cor de fundo ao passar o mouse */
+  color: #1877F2; /* Cor do texto ao passar o mouse */
+}
+
+/* Ícones */
+.icon-google,
+.icon-facebook {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:  35px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 35px; /* Ajuste o tamanho do ícone conforme necessário */
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.icon-google {
+  background-image: url('https://logospng.org/download/google/logo-google-4096.png'); /* Substitua com a URL correta do ícone do Google */
+}
+
+.icon-facebook {
+  background-image: url('https://cdn-icons-png.flaticon.com/256/124/124010.png'); /* Substitua com a URL correta do ícone do Facebook */
+}
+
+/* Estilo para o campo de concordância */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 20px auto; /* Centraliza vertical e horizontalmente */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Espaço entre a caixa de seleção e o texto */
+}
+
+label {
+  font-weight: normal; /* Remove negrito do texto */
+}
+
+a {
+  color: #2e856e;
+  text-decoration: none;
+  border-bottom: 1px dashed #2e856e; /* Adiciona linha pontilhada sob o link */
+}
+
+input[type="checkbox"]:required:invalid + label::before {
+  content: "*"; /* Adiciona asterisco antes do texto quando não está marcado */
+  color: #FF0000; /* Cor vermelha para o asterisco */
+  margin-right: 5px; /* Espaço entre o asterisco e o texto */
+}
+
+/* Estilo para o link quando hover */
+a:hover {
+  border-bottom: none; /* Remove a linha pontilhada ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+* Estilo para o contêiner do cabeçalho do perfil */
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Espaçamento entre o cabeçalho e o resto do conteúdo */
+}
+
+/* Estilo para a imagem de perfil */
+.perfil-foto-wrapper {
+  width: 100px; /* Defina o tamanho desejado para a imagem */
+  height: 100px; /* Defina o tamanho desejado para a imagem */
+  border: 2px solid #ccc; /* Borda cinza */
+  border-radius: 50%; /* Borda circular */
+  overflow: hidden; /* Recorta a imagem para ficar dentro do círculo */
+}
+
+#fotoPerfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem e preenche o círculo */
+}
+
+/* Estilos para o footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color:#2e856e; /* Cor do fundo */
+  color: #000; /* Cor do texto em preto */
+  padding: 10px 0;
+  margin-top: 20px; /* Adicione um espaçamento curto acima do footer */
+}
+
+#map-container {
+  text-align: center;
+}
+
+#map {
+  height: 800px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.leaflet-marker-icon {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#map-message {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+#search-container {
+  float: left;
+  width: 40%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#address-input {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+#clinics-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.clinic-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.leaflet-marker-icon {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.clinic-marker {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#web-results {
+  margin-top: 20px;
+}
+
+/* Adicione essas regras de estilo para a tabela */
+#tabela-fila {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tabela-fila th, #tabela-fila td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Defina larguras específicas para cada coluna */
+#tabela-fila th:nth-child(1),
+#tabela-fila td:nth-child(1) {
+  width: 20%; /* Largura da coluna Paciente */
+}
+
+#tabela-fila th:nth-child(2),
+#tabela-fila td:nth-child(2) {
+  width: 20%; /* Largura da coluna Data da Consulta */
+}
+
+#tabela-fila th:nth-child(3),
+#tabela-fila td:nth-child(3) {
+  width: 15%; /* Largura da coluna Hora da Consulta */
+}
+
+#tabela-fila th:nth-child(4),
+#tabela-fila td:nth-child(4) {
+  width: 25%; /* Largura da coluna Especialidade */
+}
+
+#tabela-fila th:nth-child(5),
+#tabela-fila td:nth-child(5) {
+  width: 20%; /* Largura da coluna Comentários */
+}
+
+/* Estilos específicos para a tabela de agendamentos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Adicione um espaço entre a seção anterior e a tabela */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #2e856e; /* Cor de fundo para cabeçalhos da tabela */
+  color: white;
+}
+
+/* Estilize as linhas ímpares da tabela */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Adicione um hover nas linhas da tabela para destacar quando o mouse passa por cima */
+tr:hover {
+  background-color: #ddd;
+}
